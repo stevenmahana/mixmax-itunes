@@ -106,10 +106,10 @@ function resolver(data, req, res) {
         .value();
 
     if (results.length === 0) {
-        res.json([{
+        res.json({
             body: '<i>(no results)</i>'
-        }]);
+        });
     } else {
-        res.json(results);
+        res.json(results[0]);
     }
 }
